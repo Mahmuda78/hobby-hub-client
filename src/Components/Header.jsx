@@ -4,6 +4,9 @@ import { AuthContext } from '../Provider/AuthProvider';
 import { toast } from 'react-toastify';
 
 const Header = () => {
+
+  const { user, logOut } = use(AuthContext);
+
   const link = ({ isActive }) =>
     isActive
       ? "text-[#FD6E0A] font-semibold"
@@ -34,7 +37,7 @@ const Header = () => {
     </>
   );
 
-  const { user, logOut } = use(AuthContext);
+  
   const handleLogOut = () => {
     console.log("user trying to LogOut");
     logOut()
@@ -86,38 +89,34 @@ const Header = () => {
       </div>
 
       {/* Navbar End */}
-      <div className="navbar-end">
-        {!user ? (
-          <Link
-            to="/login"
-            className="btn bg-[#FD6E0A] border-none hover:bg-[#e55e00] text-white"
-          >
-            Login
-          </Link>
-        ) : (
-          <div className="dropdown dropdown-end">
-            <div tabIndex={0} role="button" className="avatar">
-              <div className="w-10 rounded-full border-2 border-[#FD6E0A]">
-                <img src={user.photoURL} alt="user" />
-              </div>
-            </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-black rounded-box w-52"
-            >
-              <li className="text-white">{user.displayName}</li>
-              <li>
-                <a
-                  onClick={handleLogOut}
-                  className="hover:text-[#FD6E0A] cursor-pointer"
-                >
-                  Logout
-                </a>
-              </li>
-            </ul>
-          </div>
-        )}
+     <div className="navbar-end">
+  {!user ? (
+    <Link
+      to="/login"
+      className="btn bg-[#FD6E0A] border-none hover:bg-[#e55e00] text-white"
+    >
+      Login
+    </Link>
+  ) : (
+    <div className="flex items-center gap-3">
+      {/* Tooltip on hover */}
+      <div className="tooltip tooltip-bottom" data-tip={user.displayName}>
+        <div className="w-10 rounded-full border-2 border-[#FD6E0A]">
+          <img className='rounded-full' src={user.photoURL} alt="user" />
+        </div>
       </div>
+
+      {/* Logout Button */}
+      <button
+        onClick={handleLogOut}
+        className="btn bg-[#FD6E0A] border-none hover:bg-[#e55e00] text-white"
+      >
+        Logout
+      </button>
+    </div>
+  )}
+</div>
+
     </div>
   );
 };

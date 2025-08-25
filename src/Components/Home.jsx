@@ -1,10 +1,13 @@
+
+import { BookOpen, Camera } from "lucide-react";
+import { FaBookOpen, FaCalendarAlt, FaUsers } from "react-icons/fa";
 import { Link } from "react-router";
 
 const Home = () => {
   return (
     <div>
 
-      {/* Banner / Slider */}
+     
       <div className="carousel w-full h-[400px]">
         <div id="slide1" className="carousel-item relative w-full">
           <img className="object-cover w-full" src="https://i.ibb.co.com/wNRkcgBV/Untitled-design-6.png" />
@@ -46,7 +49,8 @@ const Home = () => {
 
   
       
-
+       
+    
 
       
       
