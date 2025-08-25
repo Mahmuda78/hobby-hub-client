@@ -2,6 +2,7 @@
 import { BookOpen, Camera } from "lucide-react";
 import { FaBookOpen, FaCalendarAlt, FaUsers } from "react-icons/fa";
 import { Link } from "react-router";
+import FeaturedGroups from "./Features";
 
 const Home = () => {
   return (
@@ -47,7 +48,7 @@ const Home = () => {
         </div>
       </div>
 
-  
+          <FeaturedGroups></FeaturedGroups>
       
        
     
