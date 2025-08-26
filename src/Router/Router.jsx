@@ -7,6 +7,7 @@ import CreateGroups from "../Components/CreateGroups";
 import AllGroups from "../Components/AllGroups";
 import GroupDetails from "../Components/GroupDetails";
 import MyGroups from "../Components/MyGroups";
+import UpdateGroup from "../Components/UpdateGroup";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
        loader:()=>fetch('http://localhost:5000/groups'),
         Component: MyGroups
     },
+    {
+        path:'updateGroup/:id',
+        loader: ({params})=>fetch(`http://localhost:5000/groups/${params.id}`),
+        Component: UpdateGroup
+    }
     
         ]
 

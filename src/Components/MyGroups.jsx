@@ -42,7 +42,7 @@ const MyGroups = () => {
                         if (data.deletedCount) {
                             Swal.fire({
                                 title: "Deleted!",
-                                text: "Your Coffee has been deleted.",
+                                text: "Your Group has been deleted.",
                                 icon: "success"
                             });
 
@@ -70,7 +70,7 @@ const MyGroups = () => {
 
       <div className="overflow-x-auto shadow-lg rounded-lg bg-white">
         <table className="table w-full">
-          {/* head */}
+        
           <thead className="bg-[#fc8f41] text-white uppercase text-sm">
             <tr>
               
@@ -111,7 +111,7 @@ const MyGroups = () => {
                 </td>
                 <td className="text-gray-600">{group.meetingLocation}</td>
                 <th className=" grid gap-y-2 grid-cols-1">
-                  <Link to="/updated">
+                  <Link to={`/updateGroup/${group._id}`}>
                   <button className="btn btn-outline btn-neutral ">
                     Update
                   </button></Link>

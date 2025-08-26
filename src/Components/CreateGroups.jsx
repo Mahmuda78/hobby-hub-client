@@ -61,12 +61,12 @@ const CreateGroups = () => {
             <form onSubmit={handleAddGroup} className='grid grid-cols-1 md:grid-cols-2 gap-6'>
 
                 <fieldset className="fieldset bg-base-200 border rounded-box border-base-300 p-4 col-span-2">
-                    <label className="label font-semibold">Group Name</label>
+                    <label className="label text-black font-semibold">Group Name</label>
                     <input type="text" name='groupName' className="input w-full" placeholder="Enter group name" required />
                 </fieldset>
 
                 <fieldset className="fieldset bg-base-200 border rounded-box border-base-300 p-4">
-                    <label className="label font-semibold">Hobby Category</label>
+                    <label className="label text-black font-semibold">Hobby Category</label>
                     <select name="hobbyCategory" className="select w-full" required>
                         <option value="">Select a category</option>
                         {hobbyCategories.map((cat, idx) => (
@@ -76,42 +76,42 @@ const CreateGroups = () => {
                 </fieldset>
 
                 <fieldset className="fieldset bg-base-200 border rounded-box border-base-300 p-4">
-                    <label className="label font-semibold">Max Members</label>
+                    <label className="label text-black font-semibold">Max Members</label>
                     <input type="number" name='maxMembers' className="input w-full" placeholder="Max members" required />
                 </fieldset>
 
                 <fieldset className="fieldset bg-base-200 border rounded-box border-base-300 p-4">
-                    <label className="label font-semibold">Meeting Location</label>
+                    <label className="label text-black font-semibold">Meeting Location</label>
                     <input type="text" name='meetingLocation' className="input w-full" placeholder="City/Area" required />
                 </fieldset>
 
                 <fieldset className="fieldset bg-base-200 border rounded-box border-base-300 p-4">
-                    <label className="label font-semibold">Start Date</label>
+                    <label className="label text-black font-semibold">Start Date</label>
                     <input type="date" name='startDate' className="input w-full" required />
                 </fieldset>
 
                 <fieldset className="fieldset bg-base-200 border rounded-box border-base-300 p-4 col-span-2">
-                    <label className="label font-semibold">Image URL</label>
+                    <label className="label text-black font-semibold">Image URL</label>
                     <input type="text" name='imageUrl' className="input w-full" placeholder="Group photo URL" required />
                 </fieldset>
 
                 <fieldset className="fieldset bg-base-200 border rounded-box border-base-300 p-4 col-span-2">
-                    <label className="label font-semibold">Description</label>
+                    <label className="label text-black font-semibold">Description</label>
                     <textarea name='description' className="textarea w-full" placeholder="Write about the group..." required></textarea>
                 </fieldset>
 
                 <fieldset className="fieldset bg-base-200  border rounded-box border-base-300 p-4">
-                    <label className="label font-semibold">User Name</label>
+                    <label className="label text-black font-semibold">User Name</label>
                     <input type="text" name='userName' defaultValue={user?.displayName || ''} readOnly className="input w-ful" />
                 </fieldset>
 
                 <fieldset className="fieldset bg-base-200 border rounded-box border-base-300 p-4">
-                    <label className="label font-semibold">User Email</label>
+                    <label className="label text-black font-semibold">User Email</label>
                     <input type="email" name='userEmail' defaultValue={user?.email || ''} readOnly className="input w-full" />
                 </fieldset>
 
                 <div className='col-span-2'>
-                    <input type="submit" className='btn  btn-outline btn-neutralm w-full' value="Create Group" />
+                    <input type="submit" className='btn  btn-outline btn-neutral w-full' value="Create Group" />
                 </div>
             </form>
         </div>
