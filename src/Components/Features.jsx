@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ExtraSection from "./extraSection";
 
 const FeaturedGroups = () => {
   const [groups, setGroups] = useState([]);
@@ -48,6 +49,8 @@ const FeaturedGroups = () => {
           ))}
         </div>
       )}
+
+      <ExtraSection></ExtraSection>
     </section>
   );
 };
