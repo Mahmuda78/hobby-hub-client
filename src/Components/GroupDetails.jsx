@@ -48,7 +48,7 @@ const GroupDetails = () => {
             </div>
           </div>
 
-          {/* Group Details */}
+        
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-700">
             <div className="bg-orange-50 p-4 rounded-xl shadow-inner">
               <span className="font-semibold">Description:</span>
@@ -70,7 +70,7 @@ const GroupDetails = () => {
             </div>
           </div>
 
-          {/* Join Button */}
+        
           <div className="mt-6 text-center">
             <button 
             
