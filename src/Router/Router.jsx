@@ -6,6 +6,7 @@ import Home from "../Components/Home";
 import CreateGroups from "../Components/CreateGroups";
 import AllGroups from "../Components/AllGroups";
 import GroupDetails from "../Components/GroupDetails";
+import MyGroups from "../Components/MyGroups";
 
 const router = createBrowserRouter([
     {
@@ -22,15 +23,20 @@ const router = createBrowserRouter([
     },
     
     {
-        path:'/groups',
+        path:'groups',
         loader:()=>fetch('http://localhost:5000/groups'),
         Component:AllGroups
     },
     {
-        path:'/group/:id',
+        path:'group/:id',
         loader: ({params})=>fetch(`http://localhost:5000/groups/${params.id}`),
         Component: GroupDetails
     },
+    {
+        path:'myGroups',
+        loader: ({params})=>fetch(`http://localhost:5000/groups/${params.id}`),
+        Component: MyGroups
+    }
         ]
 
     },
