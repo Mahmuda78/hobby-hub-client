@@ -111,7 +111,7 @@ const CreateGroups = () => {
                 </fieldset>
 
                 <div className='col-span-2'>
-                    <input type="submit" className='btn  btn-outline btn-neutral w-full' value="Create Group" />
+                    <input type="submit" className='btn  btn-outline btn-neutralm w-full' value="Create Group" />
                 </div>
             </form>
         </div>

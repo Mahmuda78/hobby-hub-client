@@ -34,9 +34,10 @@ const router = createBrowserRouter([
     },
     {
         path:'myGroups',
-        loader: ({params})=>fetch(`http://localhost:5000/groups/${params.id}`),
+       loader:()=>fetch('http://localhost:5000/groups'),
         Component: MyGroups
-    }
+    },
+    
         ]
 
     },
