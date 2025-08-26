@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoaderData } from "react-router";
+import { Link, useLoaderData } from "react-router";
 
 const AllGroups = () => {
   const groups = useLoaderData();
@@ -24,7 +24,7 @@ const AllGroups = () => {
             </tr>
           </thead>
           <tbody>
-            {groups.map((group, index) => (
+            {groups.map((group) => (
               <tr
                 key={group._id}
                 className="hover:bg-[#FFF3E0] transition-colors duration-200"
@@ -54,9 +54,9 @@ const AllGroups = () => {
                 </td>
                 <td className="text-gray-600">{group.meetingLocation}</td>
                 <th>
-                  <button className="btn btn-outline btn-neutral ">
+                  <Link to={`/group/${group._id}`}><button className="btn btn-outline btn-neutral ">
                     See more
-                  </button>
+                  </button></Link>
                 </th>
               </tr>
             ))}
