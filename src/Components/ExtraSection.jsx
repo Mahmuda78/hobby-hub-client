@@ -1,13 +1,13 @@
 import React from "react";
 import { FaBookOpen, FaCalendarAlt, FaUsers } from "react-icons/fa";
-import { Cursor, useTypewriter } from "react-simple-typewriter";
+import Upcomming from "./Upcomming";
 
 const ExtraSection = () => {
  
 
   return (
     <div>
-      <section className="bg-gradient-to-r from-gray-100 to-gray-200 px-6 lg:px-20 py-14 text-center">
+      <section className=" px-4 lg:px-2 py-14 text-center">
       <h2 className="text-3xl font-bold text-center mb-10 text-[#FD6E0A]">
         Why Join HobbyHub?
       </h2>
@@ -47,7 +47,7 @@ const ExtraSection = () => {
         </div>
       </div>
     </section>
-
+<Upcomming></Upcomming>
     </div>
   );
 };
