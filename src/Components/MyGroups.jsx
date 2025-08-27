@@ -14,14 +14,14 @@ const MyGroups = () => {
   if (!user) {
     return  <><p>data not found</p></>
   }
-  console.log(initialGroups);
+  // console.log(initialGroups);
   
 
    const myGroups = groups.filter((group) => group.userEmail === user.email);
 
 
    const handleDelete = (_id) => {
-        console.log(_id);
+        // console.log(_id);
 
         Swal.fire({
             title: "Are you sure?",
@@ -32,7 +32,7 @@ const MyGroups = () => {
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
-            console.log(result.isConfirmed)
+            // console.log(result.isConfirmed)
             if (result.isConfirmed) {
 
                 // start deleting the coffee

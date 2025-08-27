@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 const UpdateGroup = () => {
     const {_id,groupName, hobbyCategorie, maxMembers, meetingLocation, startDate,imageUrl,description} = useLoaderData();
     const {user} = use(AuthContext)
-    console.log(_id);
+    // console.log(_id);
     
     
     
@@ -15,7 +15,7 @@ e.preventDefault();
 const form = e.target;
 const formData = new FormData(form);
 const updateGroup = Object.fromEntries(formData);
-console.log(updateGroup);
+// console.log(updateGroup);
 
 fetch(`https://hobby-hub-server-tan.vercel.app/groups/${_id}`,{
     method:'PUT',

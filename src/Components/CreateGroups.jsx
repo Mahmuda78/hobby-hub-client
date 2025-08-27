@@ -4,14 +4,14 @@ import { AuthContext } from '../Provider/AuthProvider';
 
 const CreateGroups = () => {
     const { user } = use(AuthContext);
-    console.log(user);
+    // console.log(user);
 
     const handleAddGroup = e => {
         e.preventDefault();
         const form = e.target;
         const formData = new FormData(form);
         const newGroup = Object.fromEntries(formData.entries());
-        console.log(newGroup);
+        // console.log(newGroup);
 
         
         fetch('https://hobby-hub-server-tan.vercel.app/groups', {

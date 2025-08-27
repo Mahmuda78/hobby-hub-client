@@ -5,7 +5,7 @@ import errorAnimation from "../assets/eror.json";
 
 const ErrorPage = () => {
   const error = useRouteError();
-  console.error(error);
+  // console.error(error);
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-base-100 text-base-content p-6">

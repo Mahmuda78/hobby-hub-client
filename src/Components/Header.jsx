@@ -39,13 +39,13 @@ const Header = () => {
 
   
   const handleLogOut = () => {
-    console.log("user trying to LogOut");
+    // console.log("user trying to LogOut");
     logOut()
       .then(() => {
         toast("You Logged Out successfully");
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       });
   };
 

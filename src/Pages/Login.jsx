@@ -19,7 +19,7 @@ const Login = () => {
         signIn(email, password)
             .then((result) => {
                 const user = result.user;
-                console.log(user);
+                // console.log(user);
 
                 toast("You are successfully Login")
                 setTimeout(() => {
@@ -38,7 +38,7 @@ const Login = () => {
         googleSignIn(provider)
             .then(result => {
                 const user = result.user;
-                console.log(" Logged in:", user);
+                // console.log(" Logged in:", user);
                 
                 toast(`Welcome ${user.displayName}`);
                 setTimeout(()=>{navigate(`${location.state ? location.state : "/"}`);},4000);
