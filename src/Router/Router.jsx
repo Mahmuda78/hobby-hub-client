@@ -10,6 +10,7 @@ import MyGroups from "../Components/MyGroups";
 import UpdateGroup from "../Components/UpdateGroup";
 import ErrorPage from "../Pages/ErrorPage";
 import PrivateRoute from "../Provider/PriveteRoute";
+import ForgotPassword from "../Pages/ForgotPassword";
 
 const router = createBrowserRouter([
     {
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
     {
         path:'*',
         Component:ErrorPage
+    },
+    {
+        path:'/forgotPw',
+        Component:ForgotPassword
     }
 ])
 export default router
