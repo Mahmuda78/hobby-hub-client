@@ -8,11 +8,14 @@ import Swal from "sweetalert2";
 const MyGroups = () => {
  
   const { user } = use(AuthContext);
+
   const initialGroups = useLoaderData();
  const [groups, setGroups]= useState(initialGroups)
   if (!user) {
     return  <><p>data not found</p></>
   }
+  console.log(initialGroups);
+  
 
    const myGroups = groups.filter((group) => group.userEmail === user.email);
 
@@ -59,7 +62,7 @@ const MyGroups = () => {
     }
 
   return (
-    <div>
+    <div className="bg-white">
       <h2 className="text-3xl font-bold mb-6 text-center text-gradient-to-r from-purple-500 to-pink-500">My Groups</h2>
       {myGroups.length === 0 ? (
         <p className="text-gray-600 text-center italic">You haven't created or joined any groups yet.</p>

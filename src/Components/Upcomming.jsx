@@ -38,7 +38,7 @@ const [groups, setGroups] = useState([]);
       <h2 className="text-3xl font-bold text-[#FD6E0A]">
         Upcoming Events
       </h2>
-      <p className="text-lg py-4 text-gray-700 font-medium">
+      <p className="text-lg py-6 badge badge-ghost badge-neutral font-medium">
         <span>{text}</span>
         <Cursor cursorColor="#FD6E0A" />
       </p>

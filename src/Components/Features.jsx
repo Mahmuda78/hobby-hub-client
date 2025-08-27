@@ -21,7 +21,7 @@ const FeaturedGroups = () => {
     .slice(0, 6);
 
   return (
-    <section className="px-6 lg:px-20 py-14 bg-gray-50">
+    <section className="px-6 lg:px-20 py-14">
       <h2 className="text-3xl font-bold text-center mb-10 text-[#FD6E0A]">
         Featured Groups
       </h2>
@@ -33,14 +33,14 @@ const FeaturedGroups = () => {
           {featuredGroups.map(group => (
             <div
               key={group._id || group.id}
-              className="bg-white shadow-2xl border-2 border-gray-50 rounded-2xl overflow-hidden hover:shadow-xl transition"
+              className="bg-white border-2 border-gray-50 rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:scale-105 transition duration-300"
             >
               <img
                 src={group.imageUrl}
                 className="h-48 w-full object-cover"
               />
               <div className="p-4">
-                <h3 className="text-xl font-semibold mb-2">{group.groupName}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-black">{group.groupName}</h3>
                 <p className="text-gray-600">
                    Date: {new Date(group.startDate).toLocaleDateString()}
                 </p>

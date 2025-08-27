@@ -18,7 +18,7 @@ const ExtraSection = () => {
           <div className="flex justify-center mb-4 text-[#FD6E0A]">
             <FaUsers size={40} />
           </div>
-          <h3 className="font-semibold text-xl mb-2">Find Your Tribe</h3>
+          <h3 className="font-semibold text-xl text-black mb-2">Find Your Tribe</h3>
           <p className="text-gray-600">
             Connect with like-minded people who share your passion.
           </p>
@@ -29,7 +29,7 @@ const ExtraSection = () => {
           <div className="flex justify-center mb-4 text-[#FD6E0A]">
             <FaBookOpen size={40} />
           </div>
-          <h3 className="font-semibold text-xl mb-2">Learn & Grow</h3>
+          <h3 className="font-semibold text-xl mb-2 text-black">Learn & Grow</h3>
           <p className="text-gray-600">
             Explore new hobbies, gain knowledge, and improve skills.
           </p>
@@ -40,7 +40,7 @@ const ExtraSection = () => {
           <div className="flex justify-center mb-4 text-[#FD6E0A]">
             <FaCalendarAlt size={40} />
           </div>
-          <h3 className="font-semibold text-xl mb-2">Host Events</h3>
+          <h3 className="font-semibold text-xl mb-2 text-black">Host Events</h3>
           <p className="text-gray-600">
             Organize and attend exciting activities in your area.
           </p>

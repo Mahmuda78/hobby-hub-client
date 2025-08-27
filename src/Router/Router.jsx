@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, } from "react-router";
 import HomeLayout from "../Layout/HomeLayout";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
@@ -8,6 +8,7 @@ import AllGroups from "../Components/AllGroups";
 import GroupDetails from "../Components/GroupDetails";
 import MyGroups from "../Components/MyGroups";
 import UpdateGroup from "../Components/UpdateGroup";
+import ErrorPage from "../Pages/ErrorPage";
 
 const router = createBrowserRouter([
     {
@@ -55,6 +56,9 @@ const router = createBrowserRouter([
         path: 'register',
         Component: Register
     },
-    
+    {
+        path:'*',
+        Component:ErrorPage
+    }
 ])
 export default router
