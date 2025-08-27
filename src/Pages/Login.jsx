@@ -20,13 +20,15 @@ const Login = () => {
             .then((result) => {
                 const user = result.user;
                 console.log(user);
-                navigate(`${location.state ? location.state : "/"}`);
+
                 toast("You are successfully Login")
+                setTimeout(() => {
+                    navigate(location.state ? location.state : "/");
+                }, 2000);
             })
             .catch((error) => {
                 const errorCode = error.code;
-                // const errorMessage = error.message;
-                // alert(errorCode, errorMessage);
+
                 setError(errorCode);
                 toast.error("Somthing Wrong!")
             });
@@ -37,8 +39,9 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(" Logged in:", user);
-                navigate(`${location.state ? location.state : "/"}`);
+                
                 toast(`Welcome ${user.displayName}`);
+                setTimeout(()=>{navigate(`${location.state ? location.state : "/"}`);},4000);
             })
             .catch(error => {
                 console.error(" Error during sign-in:", error);

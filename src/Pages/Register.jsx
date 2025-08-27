@@ -47,7 +47,10 @@ const Register = () => {
         updateUser({ displayName: name, photoURL: photo })
           .then(() => {
             setUser({ ...user, displayName: name, photoURL: photo });
-            navigate("/");
+            toast(`Welcome ${user.displayName}`);
+            setTimeout(() => {
+              navigate("/");
+            }, 3000);
           })
           .catch((error) => {
             console.log(error);
@@ -68,8 +71,11 @@ const Register = () => {
           .then(result => {
             const user = result.user;
             // console.log("Logged in:", user);
-            navigate(`${location.state ? location.state : "/"}`);
+            
             toast(`Welcome ${user.displayName}`);
+            setTimeout(() => {
+              navigate(`${location.state ? location.state : "/"}`);
+            }, 4000);
           })
           .catch(error => {
             console.error("Error during sign-in:", error);
