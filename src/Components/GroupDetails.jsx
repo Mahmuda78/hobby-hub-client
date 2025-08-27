@@ -6,9 +6,11 @@ import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 
 const GroupDetails = () => {
-    const group = useLoaderData()
+  const group = useLoaderData()
 
-
+  const today = new Date();
+  const startDate = new Date(group.startDate);
+  const isDisable = startDate < today
   if (!group) {
     return (
       <div className="flex justify-center items-center min-h-screen">
@@ -21,7 +23,7 @@ const GroupDetails = () => {
     <div className="p-6 min-h-screen">
       <Fade cascade damping={0.2} triggerOnce>
         <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-2xl p-8">
-          
+
           <div className="flex flex-col md:flex-row items-center gap-6 mb-6">
             <div className="avatar">
               <div className="mask mask-squircle h-28 w-28 shadow-lg">
@@ -38,7 +40,7 @@ const GroupDetails = () => {
               >
                 {group.groupName}
               </h2>
-              
+
               <span className="badge badge-neutral py-4 text-lg px-4">
                 {group.hobbyCategory}
               </span>
@@ -48,7 +50,7 @@ const GroupDetails = () => {
             </div>
           </div>
 
-        
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-700">
             <div className="bg-orange-50 p-4 rounded-xl shadow-inner">
               <span className="font-semibold">Description:</span>
@@ -70,10 +72,10 @@ const GroupDetails = () => {
             </div>
           </div>
 
-        
+
           <div className="mt-6 text-center">
-            <button 
-            
+            <button
+              disabled={isDisable}
               className="btn border-amber-500 hover:bg-amber-600 hover:text-white"
               data-tooltip-id="joinTip"
             >

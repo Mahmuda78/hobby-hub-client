@@ -25,22 +25,22 @@ const router = createBrowserRouter([
     
     {
         path:'groups',
-        loader:()=>fetch('http://localhost:5000/groups'),
+        loader:()=>fetch('https://hobby-hub-server-tan.vercel.app/groups'),
         Component:AllGroups
     },
     {
         path:'group/:id',
-        loader: ({params})=>fetch(`http://localhost:5000/groups/${params.id}`),
+        loader: ({params})=>fetch(`https://hobby-hub-server-tan.vercel.app/groups/${params.id}`),
         Component: GroupDetails
     },
     {
         path:'myGroups',
-       loader:()=>fetch('http://localhost:5000/groups'),
+       loader:()=>fetch('https://hobby-hub-server-tan.vercel.app/groups'),
         Component: MyGroups
     },
     {
         path:'updateGroup/:id',
-        loader: ({params})=>fetch(`http://localhost:5000/groups/${params.id}`),
+        loader: ({params})=>fetch(`https://hobby-hub-server-tan.vercel.app/groups/${params.id}`),
         Component: UpdateGroup
     }
     

@@ -6,7 +6,7 @@ const FeaturedGroups = () => {
 
   useEffect(() => {
     
-    fetch("http://localhost:5000/groups")
+    fetch("https://hobby-hub-server-tan.vercel.app/groups")
       .then(res => res.json())
       .then(data => setGroups(data))
       .catch(error => console.error("Error fetching groups:", error));

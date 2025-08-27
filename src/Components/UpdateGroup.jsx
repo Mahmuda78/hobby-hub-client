@@ -4,7 +4,7 @@ import { AuthContext } from '../Provider/AuthProvider';
 import Swal from 'sweetalert2';
 
 const UpdateGroup = () => {
-    const {_id, gropName, hobbyCategorie, maxMembers, meetingLocation, startDate,imageUrl,description} = useLoaderData();
+    const {_id,groupName, hobbyCategorie, maxMembers, meetingLocation, startDate,imageUrl,description} = useLoaderData();
     const {user} = use(AuthContext)
     console.log(_id);
     
@@ -17,7 +17,7 @@ const formData = new FormData(form);
 const updateGroup = Object.fromEntries(formData);
 console.log(updateGroup);
 
-fetch(`http://localhost:5000/groups/${_id}`,{
+fetch(`https://hobby-hub-server-tan.vercel.app/groups/${_id}`,{
     method:'PUT',
     headers:{
         'content-type':'application/json'
@@ -31,7 +31,7 @@ fetch(`http://localhost:5000/groups/${_id}`,{
         Swal.fire({
                     position: "top-end",
                     icon: "success",
-                    title: "Coffee updated successfully.",
+                    title: "Group updated successfully.",
                     showConfirmButton: false,
                     timer: 1500
                   });
@@ -63,7 +63,7 @@ fetch(`http://localhost:5000/groups/${_id}`,{
 
                 <fieldset className="fieldset bg-base-300 border rounded-box border-base-300 p-4 col-span-2">
                     <label className="label text-black font-semibold">Group Name</label>
-                    <input type="text" name='groupName' defaultValue={gropName} className="input w-full" placeholder="Enter group name" required />
+                    <input type="text" name='groupName' defaultValue={groupName} className="input w-full" placeholder="Enter group name" required />
                 </fieldset>
 
                 <fieldset className="fieldset bg-base-300 border rounded-box border-base-300 p-4">

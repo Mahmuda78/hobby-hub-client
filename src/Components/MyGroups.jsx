@@ -11,11 +11,10 @@ const MyGroups = () => {
   const initialGroups = useLoaderData();
  const [groups, setGroups]= useState(initialGroups)
   if (!user) {
-    return  <><Login></Login></>
+    return  <><p>data not found</p></>
   }
 
-  const myGroups = groups.filter(group => group.userEmail === user.email);
-
+   const myGroups = groups.filter((group) => group.userEmail === user.email);
 
 
    const handleDelete = (_id) => {
@@ -34,7 +33,7 @@ const MyGroups = () => {
             if (result.isConfirmed) {
 
                 // start deleting the coffee
-                fetch(`http://localhost:5000/groups/${_id}`, {
+                fetch(`https://hobby-hub-server-tan.vercel.app/groups/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -47,8 +46,8 @@ const MyGroups = () => {
                             });
 
                             // remove the coffee from the state
-                            const remainingCoffees = groups.filter(grp => grp._id !== _id);
-                            setGroups(remainingCoffees);
+                             const remaining = myGroups.filter((grp) => grp._id !== _id);
+              setGroups(remaining);
                         
                          }
                     })
@@ -81,7 +80,7 @@ const MyGroups = () => {
             </tr>
           </thead>
           <tbody>
-            {groups.map((group) => (
+            {myGroups.map((group) => (
               <tr
                 key={group._id}
                 className="hover:bg-[#FFF3E0] transition-colors duration-200"

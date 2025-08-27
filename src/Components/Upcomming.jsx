@@ -19,7 +19,7 @@ const [groups, setGroups] = useState([]);
 
   useEffect(() => {
     
-    fetch("http://localhost:5000/groups")
+    fetch("https://hobby-hub-server-tan.vercel.app/groups")
       .then(res => res.json())
       .then(data => setGroups(data))
       .catch(error => console.error("Error fetching groups:", error));
@@ -46,7 +46,7 @@ const [groups, setGroups] = useState([]);
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {upComing.map((group) => (
           <div
-            key={group.id}
+            key={group._id}
             className="bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition duration-300 ease-in-out overflow-hidden"
           >
             
