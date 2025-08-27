@@ -4,6 +4,13 @@ import { Link, useLoaderData } from "react-router";
 const AllGroups = () => {
   const groups = useLoaderData();
   console.log(groups);
+if (!groups || !Array.isArray(groups)) {
+    return (
+      <div className="p-6 text-center text-red-500">
+        No groups found or invalid data.
+      </div>
+    );
+  }
 
   return (
     <div className="p-6  bg-gray-50 min-h-screen">

@@ -9,11 +9,13 @@ import GroupDetails from "../Components/GroupDetails";
 import MyGroups from "../Components/MyGroups";
 import UpdateGroup from "../Components/UpdateGroup";
 import ErrorPage from "../Pages/ErrorPage";
+import PrivateRoute from "../Provider/PriveteRoute";
 
 const router = createBrowserRouter([
     {
         path: '',
         Component: HomeLayout,
+        
         children: [
             {
                 index: true,
@@ -21,13 +23,13 @@ const router = createBrowserRouter([
             },
             {
         path:'createGroup',
-        Component:CreateGroups
+        element:<PrivateRoute><CreateGroups></CreateGroups></PrivateRoute>
     },
     
     {
         path:'groups',
         loader:()=>fetch('https://hobby-hub-server-tan.vercel.app/groups'),
-        Component:AllGroups
+        element:<PrivateRoute><AllGroups></AllGroups></PrivateRoute>
     },
     {
         path:'group/:id',
@@ -37,7 +39,7 @@ const router = createBrowserRouter([
     {
         path:'myGroups',
        loader:()=>fetch('https://hobby-hub-server-tan.vercel.app/groups'),
-        Component: MyGroups
+        element:<PrivateRoute><MyGroups></MyGroups></PrivateRoute>
     },
     {
         path:'updateGroup/:id',

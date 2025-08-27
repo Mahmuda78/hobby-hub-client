@@ -76,7 +76,7 @@ const GroupDetails = () => {
           <div className="mt-6 text-center">
             <button
               disabled={isDisable}
-              className="btn border-amber-500 hover:bg-amber-600 hover:text-white"
+              className="btn border-amber-500 text-black hover:bg-amber-600 hover:text-white"
               data-tooltip-id="joinTip"
             >
               Join Group
